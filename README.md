@@ -45,7 +45,6 @@
 
 ### B2. Phát triển dự án
 
-```
     > Build thư viện dùng chung cho dự án
     - config.php
     - dbhelper.php
@@ -66,8 +65,6 @@
     - Login thành công -> token (cookie) -> value (token) khác nhau với từng tài khoản người dùng & khác nhau với từng thời điểm login
     - token (value) -> xác thực được token hợp lệ hay không -> tương ứng với tài khoản người dùng nào
     -> Yêu cầu: lưu token vào trong database
-
-```
 
 ```sql
     ALTER TABLE users ADD token VARCHAR(32)
