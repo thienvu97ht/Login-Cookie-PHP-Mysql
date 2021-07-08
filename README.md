@@ -14,12 +14,12 @@
             user.php -> hiển thị danh sách người dùng đã đăng ký trong hệ thống.
                 - Nếu người dùng chưa login -> tự chuyển sang trang login.php
 
-================================================================================
+===========================================================================
 
 ### Mục 1: Tìm hiểu cookie
 
 - Cookie là gì?
-- So sanh Cookie & localStorage
+- So sánh Cookie & localStorage
   - Điểm chung:
     Cùng lưu trữ và quản lý bởi trình duyệt web
   - Khác biệt:
@@ -50,10 +50,10 @@
     - config.php
     - dbhelper.php
     - utility.php
-    - Xây dựng page
     - register.php
     - login.php
     - users.php
+    - Xây dựng page
 
 > Phát triển thêm các chức năng theo yêu cầu.
 
