@@ -1,21 +1,15 @@
 <?php
-if (!isset($_COOKIE['login']) || $_COOKIE['login'] != 'true') {
-    header('Location: login.php');
-    die();
-}
-
 require_once('../db/dbhelper.php');
 require_once('../utils/utility.php');
 
-//Cach 2
-// $user = validateToken();
-// if ($user == null) {
-//     header('Location: login.php');
-//     die();
-// }
-
+$user = validateToken();
+if ($user == null) {
+    header('Location: login.php');
+    die();
+}
 $sql      = "select * from users";
 $userList = executeResult($sql);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,25 +18,18 @@ $userList = executeResult($sql);
     <title>Users Page</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-30">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h2 class="text-center">Users Page - <?= $user['fullname'] ?>(<a href="logout.php">logout</a>)</h2>
             </div>
             <div class="panel-body">
-                <table class="table table-bordered">
+                <table class="table table-bordered  mt-30">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -75,6 +62,15 @@ $userList = executeResult($sql);
             </div>
         </div>
     </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

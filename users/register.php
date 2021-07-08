@@ -1,10 +1,4 @@
 <?php
-//Cach 1
-// if (isset($_COOKIE['login']) && $_COOKIE['login'] == 'true') {
-// 	header('Location: users.php');
-// 	die();
-// }
-
 require_once('../db/dbhelper.php');
 require_once('../utils/utility.php');
 require_once('form-register.php');

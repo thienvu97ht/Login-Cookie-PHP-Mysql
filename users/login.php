@@ -1,20 +1,14 @@
 <?php
-//Cach 1
-if (isset($_COOKIE['login']) && $_COOKIE['login'] == 'true') {
+require_once('../db/dbhelper.php');
+require_once('../utils/utility.php');
+
+//Cach 2
+$user = validateToken();
+if ($user != null) {
     header('Location: users.php');
     die();
 }
-
-require_once('../db/dbhelper.php');
-require_once('../utils/utility.php');
 require_once('./form-login.php');
-
-//Cach 2
-// $user = validateToken();
-// if ($user != null) {
-//     header('Location: users.php');
-//     die();
-// }
 
 ?>
 
