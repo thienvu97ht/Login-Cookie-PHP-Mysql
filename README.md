@@ -45,7 +45,8 @@
 
 ### B2. Phát triển dự án
 
-    > Build thư viện dùng chung cho dự án
+> Build thư viện dùng chung cho dự án
+
     - config.php
     - dbhelper.php
     - utility.php
@@ -54,14 +55,16 @@
     - login.php
     - users.php
 
-    > Phát triển thêm các chức năng theo yêu cầu.
+> Phát triển thêm các chức năng theo yêu cầu.
+
     (document.cookie = 'login=true;path=/')
     - Yêu cầu quản lý login trên hệ thống website:
     - Xác định được tài khoản nào đang đăng nhập vào hệ thống
     - Quản lý được trạng thái đăng nhập của tài khoản đó
     - Đảm bảo được tính năng bảo mật -> rất khó để hack
 
-    > Giải pháp:
+> Giải pháp:
+
     - Login thành công -> token (cookie) -> value (token) khác nhau với từng tài khoản người dùng & khác nhau với từng thời điểm login
     - token (value) -> xác thực được token hợp lệ hay không -> tương ứng với tài khoản người dùng nào
     -> Yêu cầu: lưu token vào trong database
